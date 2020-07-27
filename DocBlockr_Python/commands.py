@@ -100,8 +100,8 @@ class DocblockrPythonCommand(sublime_plugin.TextCommand):
 
         self.view.erase(edit, self.trailing_rgn)
         output = self.parser.parse(self.line, self.contents)
-        output.append(('returns', {'default': None, 'type': None, 'name': 'a'}))
-        print('output is:{}\r'.format(output))
+        # output.append(('returns', {'default': None, 'type': None, 'name': 'a'}))
+        # print('output is:{}\r'.format(output))
         snippet = self.create_snippet(output)
         write(self.view, snippet)
 
